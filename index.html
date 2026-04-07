@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CENTRAL DECOR - Material Bangunan Berkualitas</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Header & Navigation */
+        header {
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+            color: white;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #f39c12;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(146, 13, 213, 0.5), rgb(231, 216, 216)), url('https://via.placeholder.com/1200x400');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 8rem 2rem;
+            min-height: 500px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.75rem 2rem;
+            background: #f39c12;
+            color: white;
+            text-decoration: none;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+            font-size: 1rem;
+        }
+
+        .btn:hover {
+            background: #e67e22;
+        }
+
+        .btn-whatsapp {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.75rem 2rem;
+            background: #25D366;
+            color: white;
+            text-decoration: none;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+            font-size: 1rem;
+            font-weight: bold;
+        }
+
+        .btn-whatsapp:hover {
+            background: #20ba5a;
+        }
+
+        /* Categories Section */
+        .categories {
+            padding: 4rem 2rem;
+            background: #f8f9fa;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 3rem;
+            color: #2c3e50;
+        }
+
+        .categories-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .category-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .category-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 12px rgba(0,0,0,0.2);
+        }
+
+        .category-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .category-card h3 {
+            color: #2c3e50;
+            margin-bottom: 1rem;
+        }
+
+        /* Featured Products */
+        .featured {
+            padding: 4rem 2rem;
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .product-card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .product-card:hover {
+            transform: scale(1.05);
+        }
+
+        .product-image {
+            width: 100%;
+            height: 200px;
+            background: #e0e0e0;
+            object-fit: cover;
+        }
+
+        .product-info {
+            padding: 1.5rem;
+        }
+
+        .product-info h4 {
+            color: #2c3e50;
+            margin-bottom: 0.5rem;
+        }
+
+        .price {
+            color: #f39c12;
+            font-size: 1.3rem;
+            font-weight: bold;
+            margin: 1rem 0;
+        }
+
+        .rating {
+            color: #ffc107;
+            margin-bottom: 1rem;
+        }
+
+        /* Testimonials */
+        .testimonials {
+            padding: 4rem 2rem;
+            background: #ecf0f1;
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .testimonial-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 1rem;
+            color: #555;
+        }
+
+        .customer-name {
+            color: #2c3e50;
+            font-weight: bold;
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 4rem 2rem;
+            background: linear-gradient(135deg, #25D366 0%, #20ba5a 100%);
+        }
+
+        .contact-content {
+            max-width: 600px;
+            margin: 0 auto;
+            background: white;
+            padding: 3rem;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+        }
+
+        .contact-content h2 {
+            color: #2c3e50;
+            margin-bottom: 1rem;
+        }
+
+        .contact-info {
+            margin: 2rem 0;
+        }
+
+        .contact-info p {
+            font-size: 1.1rem;
+            margin: 0.5rem 0;
+            color: #555;
+        }
+
+        .whatsapp-icon {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .contact-methods {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .contact-method {
+            padding: 1.5rem;
+            background: #f8f9fa;
+            border-radius: 8px;
+            border-left: 4px solid #25D366;
+        }
+
+        .contact-method h4 {
+            color: #2c3e50;
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-method p {
+            margin: 0.5rem 0;
+            font-size: 0.95rem;
+        }
+
+        /* Footer */
+        footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 2rem;
+        }
+
+        footer p {
+            margin: 0.5rem 0;
+        }
+
+        /* WhatsApp Floating Button */
+        .whatsapp-float {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 40px;
+            right: 40px;
+            background-color: #25D366;
+            color: #d4c7c7;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 30px;
+            z-index: 100;
+            box-shadow: 2px 2px 3px #999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+
+        .whatsapp-float:hover {
+            background-color: #20ba5a;
+            transform: scale(1.1);
+        }
+
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .section-title {
+                font-size: 1.5rem;
+            }
+
+            .contact-methods {
+                grid-template-columns: 1fr;
+            }
+
+            .whatsapp-float {
+                width: 50px;
+                height: 50px;
+                bottom: 20px;
+                right: 20px;
+                font-size: 25px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="logo">🏗️ CENTRAL DECOR</div>
+            <nav>
+                <ul>
+                    <li><a href="#home">Beranda</a></li>
+                    <li><a href="#categories">Kategori</a></li>
+                    <li><a href="#products">Produk</a></li>
+                    <li><a href="#testimonials">Testimoni</a></li>
+                    <li><a href="#contact">Kontak</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <h1>Solusi Material Bangunan Terlengkap</h1>
+        <p>Kualitas terjamin, harga bersaing</p>
+        <a href="#products" class="btn">Lihat Produk</a>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="categories" id="categories">
+        <div class="container">
+            <h2 class="section-title">Kategori Produk</h2>
+            <div class="categories-grid">
+                <div class="category-card">
+                    <div class="category-icon">🧱</div>
+                    <h3>Batu & Bata</h3>
+                    <p>Bata merah, batu bata, dan material dasar bangunan</p>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon">🏭</div>
+                    <h3>Semen & Pasir</h3>
+                    <p>Semen portland, pasir bangunan, dan adukan</p>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon">🪵</div>
+                    <h3>Kayu & Rangka</h3>
+                    <p>Kayu konstruksi, rangka atap, dan kayu pertukangan</p>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon">⚙️</div>
+                    <h3>Besi & Logam</h3>
+                    <p>Besi tulangan, pipa besi, dan produk logam</p>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon">💧</div>
+                    <h3>Pipa & Fitting</h3>
+                    <p>Pipa PVC, kran, dan fitting lengkap</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products -->
+    <section class="featured" id="products">
+        <div class="container">
+            <h2 class="section-title">Produk Unggulan</h2>
+            <div class="products-grid">
+                <div class="product-card">
+                    <img src="assets/p1.jpg" alt="Semen" class="product-image">
+                    <div class="product-info">
+                        <h4>Semen Portland 50kg</h4>
+                        <div class="rating">⭐⭐⭐⭐⭐ (4.8)</div>
+                        <p>Semen berkualitas tinggi untuk konstruksi</p>
+                        <div class="price">Rp 100.000</div>
+                        <a href="https://wa.me/6285251998816?text=Halo%20CENTRAL%20DECOR,%20saya%20tertarik%20dengan%20Semen%20Portland%2050kg%20dengan%20harga%20Rp%2089.000" target="_blank" class="btn-whatsapp">
+                            💬 Pesan via WhatsApp
+                        </a>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="assets/p2.jpg" alt="keramik" class="product-image">
+                    <div class="product-info">
+                        <h4>keramik</h4>
+                        <div class="rating">⭐⭐⭐⭐⭐ (4.9)</div>
+                        <p>Keramik premium berkualitas tinggi 40x40</p>
+                        <div class="price">Rp80.000</div>
+                        <a href="https://wa.me/6285251998816?text=Halo%20CENTRAL%20DECOR,%20saya%20tertarik%20dengan%20Pasir%20Bangunan%201%20Kubik%20dengan%20harga%20Rp%20350.000" target="_blank" class="btn-whatsapp">
+                            💬 Pesan via WhatsApp
+                        </a>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="assets/p3.jpg" alt="gerobak" class="product-image">
+                    <div class="product-info">
+                        <h4>gerobak dorong</h4>
+                        <div class="rating">⭐⭐⭐⭐ (4.7)</div>
+                        <p>gerobak dorong berkualitas standar konstruksi</p>
+                        <div class="price">Rp 280.000</div>
+                        <a href="https://wa.me/6285251998816?text=Halo%20CENTRAL%20DECOR,%20saya%20tertarik%20dengan%20Bata%20Merah%20Lokal%20(1000%20pcs)%20dengan%20harga%20Rp%201.200.000" target="_blank" class="btn-whatsapp">
+                            💬 Pesan via WhatsApp
+                        </a>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="assets/p4.jpg" alt="palu" class="product-image">
+                    <div class="product-info">
+                        <h4>palu kambing </h4>
+                        <div class="rating">⭐⭐⭐⭐⭐ (4.9)</div>
+                        <p>palu kambing berkualitas</p>
+                        <div class="price">Rp 40.000</div>
+                        <a href="https://wa.me/6285251998816?text=Halo%20CENTRAL%20DECOR,%20saya%20tertarik%20dengan%20Besi%20Tulangan%2010mm%20per%20Batang%20dengan%20harga%20Rp%20125.000" target="_blank" class="btn-whatsapp">
+                            💬 Pesan via WhatsApp
+                        </a>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="assets/p5.jpg" alt="Pipa" class="product-image">
+                    <div class="product-info">
+                        <h4>Pipa rucika </h4>
+                        <div class="rating">⭐⭐⭐⭐ (4.6)</div>
+                        <p>Pipa rucika berkualitas tinggi 3/4 inch</p>
+                        <div class="price">Rp 10.000</div>
+                        <a href="https://wa.me/6285251998816?text=Halo%20CENTRAL%20DECOR,%20saya%20tertarik%20dengan%20Pipa%20PVC%203/4%20inch%20per%20Meter%20dengan%20harga%20Rp%2045.000" target="_blank" class="btn-whatsapp">
+                            💬 Pesan via WhatsApp
+                        </a>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="assets/p6.jpg" alt="cat" class="product-image">
+                    <div class="product-info">
+                        <h4>cat nippon paint 20 kg - Nippon Paint</h4>
+                        <div class="rating">⭐⭐⭐⭐⭐ (4.8)</div>
+                        <p>cat berkualitas </p>
+                        <div class="price">Rp 630.000</div>
+                        <a href="https://wa.me/6285251998816?text=Halo%20CENTRAL%20DECOR,%20saya%20tertarik%20dengan%20Kayu%20Meranti%20Kelas%201%20per%20Kubik%20dengan%20harga%20Rp%203.500.000" target="_blank" class="btn-whatsapp">
+                            💬 Pesan via WhatsApp
+                        </a>
+                     </div>
+                 </div>
+                    <div class="product-card">
+                    <img src="assets/p7.jpg" alt="batako" class="product-image">
+                    <div class="product-info">
+                        <h4>Beton Batako</h4>
+                        <div class="rating">⭐⭐⭐⭐⭐ (4.7)</div>
+                        <p>Batako Beton (H/U/Kolom) per biji</p>
+                        <div class="price">Rp5.000 </div>
+                        <a href="https://wa.me/6285251998816?text=Halo%20CENTRAL%20DECOR,%20saya%20tertarik%20dengan%20Pasir%20Bangunan%201%20Kubik%20dengan%20harga%20Rp%20350.000" target="_blank" class="btn-whatsapp">
+                            💬 Pesan via WhatsApp
+                        </a>
+                    </div>
+                </div>
+                 <div class="product-card">
+                    <img src="assets/p8.jpg" alt="seng gelombang" class="product-image">
+                    <div class="product-info">
+                        <h4>seng gelombang</h4>
+                        <div class="rating">⭐⭐⭐⭐⭐ (4.5)</div>
+                        <p>seng gelombang berkualitas tinggi 80x180cm</p>
+                        <div class="price">Rp46.500 - Rp68.000</div>
+                        <a href="https://wa.me/6285251998816?text=Halo%20CENTRAL%20DECOR,%20saya%20tertarik%20dengan%20Pasir%20Bangunan%201%20Kubik%20dengan%20harga%20Rp%20350.000" target="_blank" class="btn-whatsapp">
+                            💬 Pesan via WhatsApp
+                        </a>
+                    </div>
+                </div>
+                 <div class="product-card">
+                    <img src="assets/p9.jpg" alt="asbes plafon" class="product-image">
+                    <div class="product-info">
+                        <h4>asbes plafon</h4>
+                        <div class="rating">⭐⭐⭐⭐⭐ (4.4)</div>
+                        <p>asbes plafonAsbes Plafon Rata/Eternit 1x1 perlembar</p>
+                        <div class="price">Rp22.000</div>
+                        <a href="https://wa.me/6285251998816?text=Halo%20CENTRAL%20DECOR,%20saya%20tertarik%20dengan%20Pasir%20Bangunan%201%20Kubik%20dengan%20harga%20Rp%20350.000" target="_blank" class="btn-whatsapp">
+                            💬 Pesan via WhatsApp
+                        </a>
+                    </div>
+                </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <h2 class="section-title">Testimoni Pelanggan</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        "CENTRAL DECOR menyediakan material berkualitas dengan harga yang sangat kompetitif. Pelayanannya ramah dan pengiriman cepat!"
+                    </div>
+                    <div class="customer-name">Budi Santoso</div>
+                    <p>Kontraktor Bangunan</p>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        "Saya sudah menjadi pelanggan setia CENTRAL DECOR selama 3 tahun. Kualitas material selalu terjamin dan staffnya sangat membantu dalam memilih produk yang tepat."
+                    </div>
+                    <div class="customer-name">Siti Nurhaliza</div>
+                    <p>Arsitek</p>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        "Pengalaman berbelanja di CENTRAL DECOR yang luar biasa! Dari pemilihan barang hingga pengiriman, semuanya sangat profesional dan memuaskan."
+                    </div>
+                    <div class="customer-name">Adi Wijaya</div>
+                    <p>Pemilik Toko Bangunan</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="contact-content">
+                <div class="whatsapp-icon">💬</div>
+                <h2>Hubungi CENTRAL DECOR via WhatsApp</h2>
+                <p style="font-size: 1.1rem; margin: 1rem 0; color: #555;">
+                    Hubungi kami sekarang untuk mendapatkan informasi produk, penawaran khusus, atau konsultasi gratis!
+                </p>
+
+                <div class="contact-info">
+                    <p><strong>Nomor WhatsApp:</strong></p>
+                    <p style="font-size: 1.2rem; color: #25D366; font-weight: bold;">
+                        +62 852-5199-8816
+                    </p>
+                </div>
+
+                <div class="contact-methods">
+                    <div class="contact-method">
+                        <h4>⏰ Jam Operasional</h4>
+                        <p>Senin - Jumat: 08:00 - 17:00</p>
+                        <p>Sabtu: 09:00 - 16:00</p>
+                        <p>Minggu: Tutup</p>
+                    </div>
+                    <div class="contact-method">
+                        <h4>📍 Lokasi</h4>
+                        <p>Jl. Merdeka No. 123</p>
+                        <p>Jakarta Timur 13120</p>
+                        <p>Indonesia</p>
+                    </div>
+                </div>
+
+                <a href="https://wa.me/6285251998816?text=Halo%20CENTRAL%20DECOR!%20Saya%20ingin%20mendapatkan%20informasi%20lebih%20lanjut%20tentang%20produk%20Anda." target="_blank" class="btn-whatsapp" style="display: inline-flex; margin-top: 1rem; font-size: 1.1rem;">
+                    💬 Chat di WhatsApp
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <h3>CENTRAL DECOR</h3>
+            <p>📞 WhatsApp: +62 852-5199-8816</p>
+            <p>📧 Gmail: centraldecorr@Gmail.com</p>
+            <p>&copy; 2026 CENTRAL DECOR. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/6285251998816?text=Halo%20CENTRAL%20DECOR!%20Saya%20ingin%20mendapatkan%20informasi%20lebih%20lanjut." target="_blank" class="whatsapp-float" title="Chat dengan CENTRAL DECOR di WhatsApp">
+        💬
+    </a>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.category-card, .product-card, .testimonial-card').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(20px)';
+            card.style.transition = 'opacity 0.5s, transform 0.5s';
+            observer.observe(card);
+        });
+    </script>
+</body>
+</html>
